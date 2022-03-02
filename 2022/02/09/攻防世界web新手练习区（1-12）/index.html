@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="">
+  <title>攻防世界web新手练习区（1-12） | 旺仔的小窝</title>
+  <meta name="author" content="旺仔" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="" />
+  
+  <meta name="description" content="一.view source直接F12，可以看到flag:cyberpeace{3485c40fbf442a57c1ac6280af8070e7} 二、robots先在网址添加后缀robots.txt,会出现如下页面然后我们将后缀改为flag_1s_h3re.phpflag:cyberpeace{04cbb73c4d62a9cd327bb2faf9bbcfbf} 三、backup打开页面，问你知道i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="攻防世界web新手练习区（1-12）">
+<meta property="og:url" content="http://mywangzai.github.io/2022/02/09/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Cweb%E6%96%B0%E6%89%8B%E7%BB%83%E4%B9%A0%E5%8C%BA%EF%BC%881-12%EF%BC%89/index.html">
+<meta property="og:site_name" content="旺仔的小窝">
+<meta property="og:description" content="一.view source直接F12，可以看到flag:cyberpeace{3485c40fbf442a57c1ac6280af8070e7} 二、robots先在网址添加后缀robots.txt,会出现如下页面然后我们将后缀改为flag_1s_h3re.phpflag:cyberpeace{04cbb73c4d62a9cd327bb2faf9bbcfbf} 三、backup打开页面，问你知道i">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://mywangzai.github.io/null">
+<meta property="article:published_time" content="2022-02-09T13:18:21.000Z">
+<meta property="article:modified_time" content="2022-02-09T13:19:32.529Z">
+<meta property="article:author" content="旺仔">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mywangzai.github.io/null">
+<meta name="twitter:site" content="@null">
+  
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/night-eighties.min.css" type="text/css" media="all">
+  
+  
+  <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" type="text/css" media="all">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-dark.min.css" type="text/css" media="all">
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('/images/banner.webp');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('/images/bg.webp');
+        }
+      }
+    
+  </style>
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/archives/"><i class="fa fa-file"></i>档案馆</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/friends/"><i class="fa fa-paw"></i>好伙伴</a></li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a><i class="fa fa-link"></i>链接</a>
+                                            <ul class="sub-menu">
+                                                
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://candinya.com">作者博客</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth">项目链接</a></li>
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">旺仔的小窝</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>旺仔的小窝</h2> <br />
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        
+
+            <section class="col-md-8">
+
+        
+
+            <article>
+    <div class="kratos-hentry kratos-post-inner clearfix">
+        <header class="kratos-entry-header">
+            
+                <h1 class="kratos-entry-title text-center">攻防世界web新手练习区（1-12）</h1>
+            
+            
+            <ul class="kratos-post-meta text-center">
+                <li><i class="fa fa-calendar"></i> 2022-02-09</li>
+                <li><i class="fa fa-user"></i> 作者 旺仔</li>
+                <li>
+                    <i class="fa fa-edit"></i> 
+                    
+                    
+                        ~3.08K
+                    
+                    字
+                </li>
+                
+            </ul>
+        </header>
+        <div class="kratos-post-content">
+            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                本文最后编辑于 <time datetime="1644412772529"></time> 前，其中的内容可能需要更新。
+            </div>
+            
+            <hr />
+            <h2 id="一-view-source"><a href="#一-view-source" class="headerlink" title="一.view source"></a>一.view source</h2><p>直接F12，可以看到<br><img src="https://img-blog.csdnimg.cn/bb2df594bd2e4cebae9ada07556b0af0.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag:cyberpeace{3485c40fbf442a57c1ac6280af8070e7}</p>
+<h2 id="二、robots"><a href="#二、robots" class="headerlink" title="二、robots"></a>二、robots</h2><p>先在网址添加后缀robots.txt,会出现如下页面<br><img src="https://img-blog.csdnimg.cn/07992ce5f5384b49aaf77b5a390929ea.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">然后我们将后缀改为flag_1s_h3re.php<br><img src="https://img-blog.csdnimg.cn/36510f02616f4ca494314edf43ec1a51.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag:cyberpeace{04cbb73c4d62a9cd327bb2faf9bbcfbf}</p>
+<h2 id="三、backup"><a href="#三、backup" class="headerlink" title="三、backup"></a>三、backup</h2><p>打开页面，问你知道index.php的备份文件吗，然后我们再加上后缀index.php.bak,此时下载文件<br><img src="https://img-blog.csdnimg.cn/3606befe1c2c4e629b643d51e79960cf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">打开下载好的文件，flag出现了<br><img src="https://img-blog.csdnimg.cn/7531b27135f843d0ad24f2ae40dd0f2b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag：Cyberpeace{855A1C4B3401294CB6604CCC98BDE334}</p>
+<h2 id="四、cookie"><a href="#四、cookie" class="headerlink" title="四、cookie"></a>四、cookie</h2><p>打开页面，按F12找cookie，如图<br><img src="https://img-blog.csdnimg.cn/d65e7fb20f39416a99c82e23a7bd7b4e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">此时可以在网址后缀加上cookie.php,出现如图页面，意思是查看http响应<br><img src="https://img-blog.csdnimg.cn/abcc320398d74bb491e2d8395d320053.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">然后使用burpsuite进行抓包，查看http响应，如图可得flag<br><img src="https://img-blog.csdnimg.cn/2b41e31e48d74c30875024c23a88a198.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag:cyberpeace{b85003abf4d902f502cda1f75f393fb1}</p>
+<h2 id="五、disabled-button"><a href="#五、disabled-button" class="headerlink" title="五、disabled_button"></a>五、disabled_button</h2><p>打开页面，按钮确实没法按，遇事不决F12<br><img src="https://img-blog.csdnimg.cn/976a8d3a305c4a0c8d5ff1d23967c86d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">看到有个disabled,心想改一下把disabled变成abled，按钮能按了，按一下如下所示<br><img src="https://img-blog.csdnimg.cn/dc94dd4cc5df410f9f896c9100b6317f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag:cyberpeace{96e4244aa3517089b882bbf29d9e593d}</p>
+<h2 id="六、weak-auth"><a href="#六、weak-auth" class="headerlink" title="六、weak auth"></a>六、weak auth</h2><p>打开是个登陆页面，我们随便输个用户名密码进去，如下，意思是请以admin登录<br><img src="https://img-blog.csdnimg.cn/2202b74bedff4af9b53ccfd9e50a5a66.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">然后用burpsuite进行抓包爆破，抓包时我们随便输入密码，<br><img src="https://img-blog.csdnimg.cn/42e2624e276849e184a80c1b05b77d3b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述">然后进入测试器一栏，在密码55旁边添加§<br><img src="https://img-blog.csdnimg.cn/a5ff44e645c7479ba13006be473bd9b7.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">进入有效载荷，点击载入中选择字典，然后点击开始攻击<br><img src="https://img-blog.csdnimg.cn/0e72e02aa14b4126889cb47a1648502f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">通过长这一列来判断爆破是否成功，看到不一样的长，我们点击它，然后点击<br><img src="https://img-blog.csdnimg.cn/62fed0903b084e6f8ec58b6b696bbed9.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">之后我们点击响应，看到了flag，当然也可以自己手动输入密码<br><img src="https://img-blog.csdnimg.cn/ff03ab818af14f139446d0e2fd819313.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/57341b93a9d446ae848be194a643cad3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag:cyberpeace{7caf75b6f189f19ee14008ac95003882}</p>
+<h2 id="七、simple-php"><a href="#七、simple-php" class="headerlink" title="七、simple php"></a>七、simple php</h2><p>打开页面，发现跟传参有关，我们先传?a==0,得到如图所示<br><img src="https://img-blog.csdnimg.cn/6d3de4f4bbe8444aa6668f04bded482b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">发现是一半flag,我们看一下语句，这里注意：is_numeric() 函数用于检测变量是否为数字或数字字符串<br>传入对应参数，得到完整的flag<br><img src="https://img-blog.csdnimg.cn/21eac299d5804d289e5dc8a10d1a8c94.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag:Cyberpeace{647E37C7627CC3E4019EC69324F66C7C}</p>
+<h2 id="八、get-post"><a href="#八、get-post" class="headerlink" title="八、get post"></a>八、get post</h2><p>打开页面,让传递参数，照他说的做<br><img src="https://img-blog.csdnimg.cn/63f04df52baa4c1f938a980973f6880c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">然后又让提交变量,这里直接用hackbar提交，得到flag<br><img src="https://img-blog.csdnimg.cn/353a0cf1ae7748b49e62d81ceb51689e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag:cyberpeace{d8b214b7f9ea4ff909293f0d4c05fb6a}</p>
+<h2 id="九、xff-referer"><a href="#九、xff-referer" class="headerlink" title="九、xff_referer"></a>九、xff_referer</h2><p>先查下相关资料<br>维基百科上对xff和referer的解释：<br>X-Forwarded-For（XFF）是用来识别通过HTTP代理或负载均衡方式连接到Web服务器的客户端最原始的IP地址的HTTP头字段。<br>Referer 请求头包含了当前请求页面的来源页面的地址，即表示当前页面是通过此来源页面里的链接进入的。服务端一般使用 Referer 请求头识别访问来源，可能会以此进行统计分析、日志记录以及缓存优化等。<br>简单地说，xff是告诉服务器当前请求者的最终ip的http请求头字段，通常可以直接通过修改http头中的X-Forwarded-For字段来仿造请求的最终ip<br>referer就是告诉服务器当前访问者是从哪个url地址跳转到自己的，跟xff一样，referer也可直接修改<br>开始做题：<br>打开页面，显示ip必须为123.123.123.123，开始抓包，在代理一栏，然后发送给Repeater，然后点击重发器，点击头，点击添加，之后添加如下所示，再点击发送<br><img src="https://img-blog.csdnimg.cn/d9297bf30ac349d99dbf496e753f0f3a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述">从上图右边可以看到有一段话必须来自…，然后再次添加referer，如下图所示<br><img src="https://img-blog.csdnimg.cn/8bfba2e796294107bcc3e626fe82e17e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述">添加完点击发送，看到了flag<br><img src="https://img-blog.csdnimg.cn/c32a1973851a4e839936e0161af2c99f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述">flag：cyberpeace{e79f149f49a3503d622f0494bc630f3a}</p>
+<h2 id="十、webshell"><a href="#十、webshell" class="headerlink" title="十、webshell"></a>十、webshell</h2><p>百度百科：<br>webshell就是以asp、php、jsp或者cgi等网页文件形式存在的一种代码执行环境，主要用于网站管理、服务器管理、权限管理等操作。使用方法简单，只需上传一个代码文件，通过网址访问，便可进行很多日常操作，极大地方便了使用者对网站和服务器的管理。正因如此，也有小部分人将代码修改后当作后门程序使用，以达到控制网站服务器的目的。 [1]<br>顾名思义，“web”的含义是显然需要服务器开放web服务，“shell”的含义是取得对服务器某种程度上操作命令。webshell主要用于网站和服务器管理，由于其便利性和功能强大，被特别修改后的webshell也被部分人当作网站后门工具使用。</p>
+<p>打开页面，直接用中国菜刀（这个也属于是一个webshell），然后右键添加，如下图所示<br><img src="https://img-blog.csdnimg.cn/af122d102bbd4a82b719f34681e1957f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">添加好之后直接双击打开，页面如下<br><img src="https://img-blog.csdnimg.cn/21b6c180d1cd4857a62785ea4490f617.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">打开flag.txt<br><img src="https://img-blog.csdnimg.cn/306e41d523824a88b325dbf1aad465c8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag：cyberpeace{1d4d78cf4b8f02604295835ba209fd72}</p>
+<h2 id="十一、command-execution"><a href="#十一、command-execution" class="headerlink" title="十一、command execution"></a>十一、command execution</h2><p>先了解相关知识<br>PING:<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq646748739/article/details/81660514">https://blog.csdn.net/qq646748739/article/details/81660514</a><br>WAF：Web应用防护系统（也称为：网站应用级入侵防御系统。英文：Web Application Firewall，简称： WAF）。利用国际上公认的一种说法：Web应用防火墙是通过执行一系列针对HTTP/HTTPS的安全策略来专门为Web应用提供保护的一款产品。<br>ls命令：<a target="_blank" rel="noopener" href="https://blog.csdn.net/dyw_666666/article/details/79184126">https://blog.csdn.net/dyw_666666/article/details/79184126</a><br>cat命令：<a target="_blank" rel="noopener" href="https://blog.csdn.net/linghu_java/article/details/44058661?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164430912616780255241674%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=164430912616780255241674&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-44058661.first_rank_v2_pc_rank_v29&amp;utm_term=cat%E5%91%BD%E4%BB%A4&amp;spm=1018.2226.3001.4187">https://blog.csdn.net/linghu_java/article/details/44058661?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164430912616780255241674%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=164430912616780255241674&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-44058661.first_rank_v2_pc_rank_v29&amp;utm_term=cat%E5%91%BD%E4%BB%A4&amp;spm=1018.2226.3001.4187</a><br>开始做题：<br>先使用搜索命令查找是否有flag.txt这一文本<br><img src="https://img-blog.csdnimg.cn/544e84210aed47a6acc3233bae51ea52.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">ping一下，如图所示，找到了flag.txt<br><img src="https://img-blog.csdnimg.cn/510e575b684642acac05a8d519615aa7.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">之后用cat命令打开文本<br><img src="https://img-blog.csdnimg.cn/e2c3850d85cb4a3185fc2b131f7e4e55.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">ping一下，出现了<br><img src="https://img-blog.csdnimg.cn/3dd69a6ed11940b3a1d333ca1f9b4cbe.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_15,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag：cyberpeace{50da66af3eac110a4eaf116169f0286e}</p>
+<h2 id="十二、simple-js"><a href="#十二、simple-js" class="headerlink" title="十二、simple js"></a>十二、simple js</h2><p>打开页面，是个输密码的页面，直接点确定，然后进入一个空白页面，这时直接查看页面源代码，发现有东西<br><img src="https://img-blog.csdnimg.cn/50dcc0c6651749bc9b38cc6b87224a96.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">这个看起来好像url解码，这里将\x换成%，然后使用url解码，解出来一堆数字，此时对照ASCII码表进行解密，解出来786OsErtk12<br><img src="https://img-blog.csdnimg.cn/7a1621b89cdc40c5881adec503d60cbe.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag：Cyberpeace{786OsErtk12}</p>
+
+        </div>
+        
+            <div class="kratos-copyright text-center clearfix">
+                <h5>本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+            </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+                <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                
+                
+                    <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                    <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "http://mywangzai.github.io/2022/02/09/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Cweb%E6%96%B0%E6%89%8B%E7%BB%83%E4%B9%A0%E5%8C%BA%EF%BC%881-12%EF%BC%89/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "http://mywangzai.github.io/2022/02/09/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Cweb%E6%96%B0%E6%89%8B%E7%BB%83%E4%B9%A0%E5%8C%BA%EF%BC%881-12%EF%BC%89/";
+            const title         = "「攻防世界web新手练习区（1-12）」";
+            const excerpt       = `一.view source直接F12，可以看到flag:cyberpeace{3485c40fbf442a57c1ac6280af8070e7}
+二、robots先在网址添加后缀robots.txt,会出现如下页面然后我们将后缀改为f...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    
+                </div>
+                <div class="pull-date">
+                <span>最后编辑：2022-02-09</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" 滴水逆向笔记（二）" href="/2022/01/12/滴水逆向笔记（二）/">&lt; 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" 滴水逆向笔记（三）" href="/2022/02/09/滴水逆向笔记（三）/">下一篇 &gt;</a>
+            </div>
+            
+        </nav>
+    
+    
+</article>
+
+        
+
+            </section>
+
+        
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/avatar.webp" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">无心插柳柳成荫，</p>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 0.6em;">笔记</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/2022/02/09/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/"><i class="fa  fa-book"></i> 滴水逆向笔记（四）</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/02/09/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/"><i class="fa  fa-book"></i> 滴水逆向笔记（三）</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/02/09/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Cweb%E6%96%B0%E6%89%8B%E7%BB%83%E4%B9%A0%E5%8C%BA%EF%BC%881-12%EF%BC%89/"><i class="fa  fa-book"></i> 攻防世界web新手练习区（1-12）</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/01/12/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/"><i class="fa  fa-book"></i> 滴水逆向笔记（二）</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/01/12/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/"><i class="fa  fa-book"></i> 滴水逆向笔记（一）</a>
+            
+          
+        
+          
+            
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer"  class="ap-lrc"  >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/CandyUnion"><i class="fa fa-telegram"></i></a></li>
+                        
+                        
+                        
+                        <li><a target="_blank" rel="me" href="https://nya.one/@Candinya"><i class="fa fa fa-share-alt-square"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/Candinya"><i class="fa fa-github"></i></a></li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2022 旺仔的小窝 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by 旺仔.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+<script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+    <script async src="/js/candy.min.js"></script>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="3204190542"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
+
+
+    <script defer src="/js/kr-dark.min.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
+
+
+    </body>
+</html>
