@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="">
-  <title>滴水逆向笔记（一） | 旺仔的小窝</title>
+  <title>BUUCTF MISC（随机基础八道题） | 旺仔的小窝</title>
   <meta name="author" content="旺仔" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,20 +13,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="笔记" />
+    <meta name="keywords" content="" />
   
-  <meta name="description" content="#第一篇博客 1.进制：几进制就逢几进一，十进制逢十进一，二进制逢二进一 几进制中有几个数字，十进制有0，1，2，3，4，5，6，7，8，9这十个数字，二进制有0，1两个数字 十六进制有1，2，3，4，5，6，7，8，9，A,B,C,D,E,F； 二进制对应的为0001，0010，0011，0100，0101，0110，0111，1000，1001，1010(A)，1011(B)，1100(C),">
+  <meta name="description" content="一、你竟然赶我走下载后是一个图片，直接用010editor打开，ctrl+F搜索flag，然后就出来了flag{stego_is_s0_bor1ing} 二、N种方法解决文件是一个exe，但无法打开，用010editor打开发现是base64转图片类型的字符串，这时可以直接复制这些东西用浏览器去打开也可以搜base64在线转换图片，得到的结果与上图一致，扫一下就出了flag{dca57f966e4">
 <meta property="og:type" content="article">
-<meta property="og:title" content="滴水逆向笔记（一）">
-<meta property="og:url" content="http://mywangzai.github.io/2022/01/12/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:title" content="BUUCTF MISC（随机基础八道题）">
+<meta property="og:url" content="http://mywangzai.github.io/2022/04/09/BUUCTFMISC/index.html">
 <meta property="og:site_name" content="旺仔的小窝">
-<meta property="og:description" content="#第一篇博客 1.进制：几进制就逢几进一，十进制逢十进一，二进制逢二进一 几进制中有几个数字，十进制有0，1，2，3，4，5，6，7，8，9这十个数字，二进制有0，1两个数字 十六进制有1，2，3，4，5，6，7，8，9，A,B,C,D,E,F； 二进制对应的为0001，0010，0011，0100，0101，0110，0111，1000，1001，1010(A)，1011(B)，1100(C),">
+<meta property="og:description" content="一、你竟然赶我走下载后是一个图片，直接用010editor打开，ctrl+F搜索flag，然后就出来了flag{stego_is_s0_bor1ing} 二、N种方法解决文件是一个exe，但无法打开，用010editor打开发现是base64转图片类型的字符串，这时可以直接复制这些东西用浏览器去打开也可以搜base64在线转换图片，得到的结果与上图一致，扫一下就出了flag{dca57f966e4">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://mywangzai.github.io/null">
-<meta property="article:published_time" content="2022-01-12T09:51:46.000Z">
-<meta property="article:modified_time" content="2022-01-12T09:55:31.097Z">
+<meta property="article:published_time" content="2022-04-09T08:44:39.000Z">
+<meta property="article:modified_time" content="2022-04-09T08:46:07.602Z">
 <meta property="article:author" content="旺仔">
-<meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://mywangzai.github.io/null">
 <meta name="twitter:site" content="@null">
@@ -163,17 +162,17 @@
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">滴水逆向笔记（一）</h1>
+                <h1 class="kratos-entry-title text-center">BUUCTF MISC（随机基础八道题）</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2022-01-12</li>
+                <li><i class="fa fa-calendar"></i> 2022-04-09</li>
                 <li><i class="fa fa-user"></i> 作者 旺仔</li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
                     
-                        512
+                        792
                     
                     字
                 </li>
@@ -182,22 +181,18 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1641981331097"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1649493967602"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
-            <p>#第一篇博客</p>
-<p>1.进制：几进制就逢几进一，十进制逢十进一，二进制逢二进一</p>
-<p>几进制中有几个数字，十进制有0，1，2，3，4，5，6，7，8，9这十个数字，二进制有0，1两个数字</p>
-<p>十六进制有1，2，3，4，5，6，7，8，9，A,B,C,D,E,F；</p>
-<p>二进制对应的为0001，0010，0011，0100，0101，0110，0111，1000，1001，1010(A)，1011(B)，1100(C),1101(D),1110(E),1111(F)</p>
-<p>2.二进制</p>
-<p>计算机上的所有文件都是以二进制方式存储的，且受硬件制约，只能用二进制，另外，二进制足够表示了</p>
-<p>3.一句经典的话：进制之间不需要转换，每个进制都是最完美的进制</p>
-<p>4.计算方法本质上就是查出来的</p>
-<p>十六进制下：</p>
-<p>15+5=15+1+4=24；</p>
-<p>5*4=5+5+5+1+4=24；<br>————————————————<br>版权声明：本文为CSDN博主「瑟瑟发dou的小怪」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_51295934/article/details/122331945">https://blog.csdn.net/m0_51295934/article/details/122331945</a></p>
+            <h2 id="一、你竟然赶我走"><a href="#一、你竟然赶我走" class="headerlink" title="一、你竟然赶我走"></a>一、你竟然赶我走</h2><p>下载后是一个图片，直接用010editor打开，ctrl+F搜索flag，然后就出来了<br><img src="https://img-blog.csdnimg.cn/33345ada929d42f3b5d25801518b3383.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag{stego_is_s0_bor1ing}</p>
+<h2 id="二、N种方法解决"><a href="#二、N种方法解决" class="headerlink" title="二、N种方法解决"></a>二、N种方法解决</h2><p>文件是一个exe，但无法打开，用010editor打开发现是base64转图片类型的字符串，这时可以直接复制这些东西用浏览器去打开<br><img src="https://img-blog.csdnimg.cn/1ab36591cd01493d9047817b7583de90.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20e548ae2e45483d8c63228020fc11d3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">也可以搜base64在线转换图片，得到的结果与上图一致，扫一下就出了<br>flag{dca57f966e4e4e31fd5b15417da63269}</p>
+<h2 id="三、乌镇峰会种图"><a href="#三、乌镇峰会种图" class="headerlink" title="三、乌镇峰会种图"></a>三、乌镇峰会种图</h2><p>直接用010editor打开，一搜flag就搜出来了<br><img src="https://img-blog.csdnimg.cn/828b4703582840fd84b0e4773e70f030.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h2 id="四、大白"><a href="#四、大白" class="headerlink" title="四、大白"></a>四、大白</h2><p>题目都说了图片小，那就把它调大些，这里把01改成08<br><img src="https://img-blog.csdnimg.cn/59f0174b9b384d178bbbda9952bb0133.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">打开图片，得到flag<br><img src="https://img-blog.csdnimg.cn/cc0a25a9bffe432ebe57317be7c89562.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag{He1l0_d4_ba1}</p>
+<h2 id="五、二维码"><a href="#五、二维码" class="headerlink" title="五、二维码"></a>五、二维码</h2><p>这道题主要考察对binwalk分离工具的使用<br>用binwalk分析发现这不仅仅是一张图片，还有压缩包，包里面有个文本<br><img src="https://img-blog.csdnimg.cn/f478c3512df24ffebb2a8a7eb1a3e2bf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">文本需要密码打开，根据文件名猜想应该是四位数字密码，暴力破解成功<br><img src="https://img-blog.csdnimg.cn/bf8657f5a4db490c83f65eaadd25bc44.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/dd93dbc5c6d944fb925fc079827a2b98.png" alt="在这里插入图片描述"><br>flag{vjpw_wnoei}</p>
+<h2 id="六、文件中的秘密"><a href="#六、文件中的秘密" class="headerlink" title="六、文件中的秘密"></a>六、文件中的秘密</h2><p>这道题考查对StegSolve工具的使用，使用file format功能，发现了flag，接下来就是把这个flag进行规矩处理即可<br><img src="https://img-blog.csdnimg.cn/12806b1fece5417580db40a82466fc87.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">当然，用010editor也可以，只不过搜的时候不要搜flag，搜一个f慢慢看就能找到<br><img src="https://img-blog.csdnimg.cn/ba52f970911b4e6da77d3622fd68cbe8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>flag{870c5a72806115cb5439345d8b014396}</p>
+<h2 id="七、wireshark"><a href="#七、wireshark" class="headerlink" title="七、wireshark"></a>七、wireshark</h2><p>这道题主要考察对wireshark的使用，题目说密码就是flag<br>直接用wireshark打开文件，之后，字符串搜索post（为什么搜索post？因为账号密码是post上去的，就这么将就地解释吧）<br>一个个翻找后找到了密码<br><img src="https://img-blog.csdnimg.cn/e00d1306a85d404f8894bb14d374c39d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag{ffb7567a1d4f4abdffdb54e022f8facd}</p>
+<h2 id="八、qr"><a href="#八、qr" class="headerlink" title="八、qr"></a>八、qr</h2><p>扫二维码就出了<br>flag{878865ce73370a4ce607d21ca01b5e59}</p>
 
         </div>
         
@@ -251,7 +246,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://mywangzai.github.io/2022/01/12/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/",
+                text: "http://mywangzai.github.io/2022/04/09/BUUCTFMISC/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -263,12 +258,10 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://mywangzai.github.io/2022/01/12/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/";
-            const title         = "「滴水逆向笔记（一）」";
-            const excerpt       = `#第一篇博客
-1.进制：几进制就逢几进一，十进制逢十进一，二进制逢二进一
-几进制中有几个数字，十进制有0，1，2，3，4，5，6，7，8，9这十个数字，二进制有0，1两个数字
-十六进制有1，2，3，4，5，6，7，8，9，A,B,C,...`;
+            const hostUrl       = "http://mywangzai.github.io/2022/04/09/BUUCTFMISC/";
+            const title         = "「BUUCTF MISC（随机基础八道题）」";
+            const excerpt       = `一、你竟然赶我走下载后是一个图片，直接用010editor打开，ctrl+F搜索flag，然后就出来了flag{stego_is_s0_bor1ing}
+二、N种方法解决文件是一个exe，但无法打开，用010editor打开发现是ba...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -287,10 +280,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a>
+                    
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2022-01-12</span>
+                <span>最后编辑：2022-04-09</span>
                 </div>
             </div>
         </footer>
@@ -299,12 +292,12 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" Hello World" href="/2022/01/12/hello-world/">&lt; 上一篇</a>
+                <a title=" csapp-lab环境搭建及lab1wp" href="/2022/03/25/csapp-lab环境搭建及lab1wp/">&lt; 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" 滴水逆向笔记（二）" href="/2022/01/12/滴水逆向笔记（二）/">下一篇 &gt;</a>
+                <a title=" C语言实现base64加密" href="/2022/04/28/C语言实现base64加密/">下一篇 &gt;</a>
             </div>
             
         </nav>

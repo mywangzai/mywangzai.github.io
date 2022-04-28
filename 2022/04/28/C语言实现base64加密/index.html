@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="">
-  <title>滴水逆向笔记（二） | 旺仔的小窝</title>
+  <title>C语言实现base64加密 | 旺仔的小窝</title>
   <meta name="author" content="旺仔" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="" />
   
-  <meta name="description" content="1.在什么情况下满足2+3&#x3D;1？ 其实这个无非就是自己定义一个进制，就比如自己定义一个十进制，进制中的元素可以是随机的， 按顺序来0，2，3，1，6，4，5，9，7，8；这个就满足2+3&#x3D;1 2.进制并不是死的，就像365进制也是存在的，多少进制都是存在的，这时候思维应该要放灵活的 3.假如定义一个三进制，由2，0，1组成； 2 0 1 02 00 01 12 10 11 11+2（往后移两位的意">
+  <meta name="description" content="一.程序目的使用c&#x2F;c++完成以下下算法: 输入一个字符串，检查该字符串总ascii码值。如果值大于1000则对该字符串进行base64加密输出，否则该字符串与base64编码表进行异或输出 二.程序代码代码如下： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="滴水逆向笔记（二）">
-<meta property="og:url" content="http://mywangzai.github.io/2022/01/12/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
+<meta property="og:title" content="C语言实现base64加密">
+<meta property="og:url" content="http://mywangzai.github.io/2022/04/28/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0base64%E5%8A%A0%E5%AF%86/index.html">
 <meta property="og:site_name" content="旺仔的小窝">
-<meta property="og:description" content="1.在什么情况下满足2+3&#x3D;1？ 其实这个无非就是自己定义一个进制，就比如自己定义一个十进制，进制中的元素可以是随机的， 按顺序来0，2，3，1，6，4，5，9，7，8；这个就满足2+3&#x3D;1 2.进制并不是死的，就像365进制也是存在的，多少进制都是存在的，这时候思维应该要放灵活的 3.假如定义一个三进制，由2，0，1组成； 2 0 1 02 00 01 12 10 11 11+2（往后移两位的意">
+<meta property="og:description" content="一.程序目的使用c&#x2F;c++完成以下下算法: 输入一个字符串，检查该字符串总ascii码值。如果值大于1000则对该字符串进行base64加密输出，否则该字符串与base64编码表进行异或输出 二.程序代码代码如下： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950#">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://mywangzai.github.io/null">
-<meta property="article:published_time" content="2022-01-12T13:41:00.000Z">
-<meta property="article:modified_time" content="2022-01-12T13:42:16.149Z">
+<meta property="article:published_time" content="2022-04-28T11:52:00.000Z">
+<meta property="article:modified_time" content="2022-04-28T12:11:44.867Z">
 <meta property="article:author" content="旺仔">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://mywangzai.github.io/null">
@@ -162,17 +162,17 @@
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">滴水逆向笔记（二）</h1>
+                <h1 class="kratos-entry-title text-center">C语言实现base64加密</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2022-01-12</li>
+                <li><i class="fa fa-calendar"></i> 2022-04-28</li>
                 <li><i class="fa fa-user"></i> 作者 旺仔</li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
                     
-                        273
+                        ~3.64K
                     
                     字
                 </li>
@@ -181,21 +181,49 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1641994936149"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1651147904867"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
-            <p>1.在什么情况下满足2+3=1？</p>
-<p>其实这个无非就是自己定义一个进制，就比如自己定义一个十进制，进制中的元素可以是随机的，</p>
-<p>按顺序来0，2，3，1，6，4，5，9，7，8；这个就满足2+3=1</p>
-<p>2.进制并不是死的，就像365进制也是存在的，多少进制都是存在的，这时候思维应该要放灵活的</p>
-<p>3.假如定义一个三进制，由2，0，1组成；</p>
-<p>2 0 1</p>
-<p>02 00 01</p>
-<p>12 10 11</p>
-<p>11+2（往后移两位的意思）=020</p>
-<p>11+2（这里是进制中的2）=022</p>
-<p>4.通过这种咋一眼看起来很没有逻辑的进制，我们可以搞一种这种类型的进制加密，也是其意义之一了</p>
+            <h2 id="一-程序目的"><a href="#一-程序目的" class="headerlink" title="一.程序目的"></a>一.程序目的</h2><p>使用c/c++完成以下下算法:</p>
+<p>输入一个字符串，检查该字符串总ascii码值。如果值大于1000则对该字符串进行base64加密输出，否则该字符串与base64编码表进行异或输出</p>
+<h2 id="二-程序代码"><a href="#二-程序代码" class="headerlink" title="二.程序代码"></a>二.程序代码</h2><p>代码如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> x[<span class="number">1000</span>]=<span class="string">&quot;&quot;</span>,y[<span class="number">1000</span>]=<span class="string">&quot;&quot;</span>,z[<span class="number">1000</span>]=<span class="string">&quot;&quot;</span>;</span><br><span class="line">	<span class="keyword">char</span> base[]=<span class="string">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;</span>;</span><br><span class="line">	<span class="keyword">int</span> i,sum=<span class="number">0</span>,len=<span class="number">0</span>,j;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;请输入字符串:&quot;</span>);</span><br><span class="line">	gets(x);</span><br><span class="line">	len=<span class="built_in">strlen</span>(x);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line"></span><br><span class="line">		sum=sum+x[i];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>,j=<span class="number">0</span>;j&lt;len;i+=<span class="number">4</span>,j+=<span class="number">3</span>)&#123;</span><br><span class="line">		y[i]=base[x[j]&gt;&gt;<span class="number">2</span>];</span><br><span class="line">		y[i+<span class="number">1</span>]=base[(x[j]&amp;<span class="number">0x3</span>)&lt;&lt;<span class="number">4</span>|(x[j+<span class="number">1</span>]&gt;&gt;<span class="number">4</span>)];</span><br><span class="line">		y[i+<span class="number">2</span>]=base[(x[j+<span class="number">1</span>]&amp;<span class="number">0xf</span>)&lt;&lt;<span class="number">2</span>|(x[j+<span class="number">2</span>]&gt;&gt;<span class="number">6</span>)];</span><br><span class="line">		y[i+<span class="number">3</span>]=base[(x[j+<span class="number">2</span>]&amp;<span class="number">0x3f</span>)];</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">switch</span>(len%<span class="number">3</span>)&#123;</span><br><span class="line">     <span class="keyword">case</span> <span class="number">1</span>:&#123;</span><br><span class="line">        y[i<span class="number">-2</span>]=<span class="string">&#x27;=&#x27;</span>;</span><br><span class="line">		y[i<span class="number">-1</span>]=<span class="string">&#x27;=&#x27;</span>;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">        &#123;</span><br><span class="line">        y[i<span class="number">-1</span>]=<span class="string">&#x27;=&#x27;</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(sum&gt;<span class="number">1000</span>)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;字符串的ASCII值为%d\n&quot;</span>,sum);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;输入的字符串ASCII值大于1000\n&quot;</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;base64加密：&quot;</span>);</span><br><span class="line">		<span class="built_in">puts</span>(y);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;输入的字符串ASCII值小于1000,将与base64编码表进行异或运算\n&quot;</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;异或运算后的结果为：&quot;</span>);</span><br><span class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">			z[i]=x[i]^base[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">puts</span>(z);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="三-程序分析"><a href="#三-程序分析" class="headerlink" title="三.程序分析"></a>三.程序分析</h2><p>1.这里先说一下base64加密</p>
+<p>通常一个字节是8位，而base64加密是使这些8位的变为6位，就比如说“ABC”对应的二进制：</p>
+<p>01000001    01000010    01000011 </p>
+<p>转为六位就是：（010000） （010100）（001001）（000011）</p>
+<p>而正是其最多只有六位，2的6次方=64，base64由此得名，且base64编码表中总共有64个字符，如下表</p>
+<p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Ffiles.deiniu.com%2Fupload%2F201203%2F20120301201803199.gif&refer=http%3A%2F%2Ffiles.deiniu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653654453&t=ae8c8ba7171c7dedc96582717f0e5a76" alt="点击查看图片来源"></p>
+<p>通过上表，base64加密“ABC”得：QUJD</p>
+<p>若有两个字符，比如“12”的二进制：00110001   00110010</p>
+<p>转为六位一组就是 001100  010011 001000（不够自动补0）</p>
+<p>本来按这样的规律base64加密是：MTI</p>
+<p>但像这种2%3=2的字符串长度，需要再补上‘=’，也就是最后的加密结果是：MTI=</p>
+<p>若字符串长度为1，也就是1%3=1，需要在加密过后再补上两个‘=’；</p>
+<p>2.代码分析</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;string.h&gt;</span><br><span class="line">int main()&#123;</span><br><span class="line">	char x[1000]=&quot;&quot;,y[1000]=&quot;&quot;,z[1000]=&quot;&quot;;//初始化数组</span><br><span class="line">	char base[]=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;;//引入base64编码表</span><br><span class="line">	int i,sum=0,len=0,j;</span><br><span class="line">	printf(&quot;请输入字符串:&quot;);</span><br><span class="line">	gets(x);</span><br><span class="line">	len=strlen(x);//获取字符串长度</span><br><span class="line">	for(i=0;i&lt;len;i++)&#123;</span><br><span class="line"></span><br><span class="line">		sum=sum+x[i];</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这一段主要是初始化数组，输入字符串并计算字符串的ASCII值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">for(i=0,j=0;j&lt;len;i+=4,j+=3)&#123;</span><br><span class="line">		y[i]=base[x[j]&gt;&gt;2];</span><br><span class="line">		y[i+1]=base[(x[j]&amp;0x3)&lt;&lt;4|(x[j+1]&gt;&gt;4)];</span><br><span class="line">		y[i+2]=base[(x[j+1]&amp;0xf)&lt;&lt;2|(x[j+2]&gt;&gt;6)];</span><br><span class="line">		y[i+3]=base[(x[j+2]&amp;0x3f)];</span><br><span class="line">	&#125;</span><br><span class="line">    switch(len%3)&#123;</span><br><span class="line">     case 1:&#123;</span><br><span class="line">        y[i-2]=&#x27;=&#x27;;</span><br><span class="line">		y[i-1]=&#x27;=&#x27;;</span><br><span class="line">		break;</span><br><span class="line">    &#125;</span><br><span class="line">     case 2:</span><br><span class="line">        &#123;</span><br><span class="line">        y[i-1]=&#x27;=&#x27;;</span><br><span class="line">        break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这一段是对输入的字符串进行base64加密</p>
+<p>for循环理论不知道该咋说，只能举个栗子，</p>
+<p>比如输入ABC，对应的二进制也就是：01000001  01000010  01000011，让第一组二进制左移两位，也就是010000，得到第一组六位base 010000；</p>
+<p>然后再让01000001与0x3（也就是11）进行与运算，也就把01000001的后两位提出来，然后左移四位也就得到010000，就是第二组base的前两位，再与右移四位的01000010（即0100）进行或运算，得到第二组六位base 010100；</p>
+<p>第三组base就是让01000010&amp;0xf（也就是1111）得到0010接着左移两位得到001000，01000011右移两位得到01，001000|01得到第三组base 001001；</p>
+<p>第四组base就01000011&amp;0x3f（也就是111111）得到000011</p>
+<p>添加‘=’的这段代码，我也不会讲，也只能举个栗子</p>
+<p>比如输入的字符串是‘1’，经过for循环之后，i的值为4，也就是y数组长度为5，但是从y[i-2]的值就是空的，所以添加‘=’要从y[i-2]开始赋值，由于y[i]里面没有存储值，所以数组长度就是4，而1%3=1，也符合上面的代码（感觉讲的好乱，不过我确实尽力了QAQ）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">if(sum&gt;1000)&#123;</span><br><span class="line">		printf(&quot;字符串的ASCII值为%d\n&quot;,sum);</span><br><span class="line">		printf(&quot;输入的字符串ASCII值大于1000\n&quot;);</span><br><span class="line">		printf(&quot;base64加密：&quot;);</span><br><span class="line">		puts(y);</span><br><span class="line">	&#125;</span><br><span class="line">	else&#123;</span><br><span class="line">		printf(&quot;输入的字符串ASCII值小于1000,将与base64编码表进行异或运算\n&quot;);</span><br><span class="line">		printf(&quot;异或运算后的结果为：&quot;);</span><br><span class="line">		for(i=0;i&lt;len;i++)&#123;</span><br><span class="line">			z[i]=x[i]^base[i];</span><br><span class="line">		&#125;</span><br><span class="line">		puts(z);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>ASCII值大于1000，作base64加密并输出</p>
+<p>ASCII值小于1000，原字符串与base64编码表进行异或运算并输出</p>
+<h2 id="四-运行结果及验证"><a href="#四-运行结果及验证" class="headerlink" title="四.运行结果及验证"></a>四.运行结果及验证</h2><p>程序运行结果：</p>
+<p><img src="https://img-blog.csdnimg.cn/e7818366bb394b0bb60981179e0bcb93.png#pic_center" alt="在这里插入图片描述"></p>
+<p>在线base64加密验证：</p>
+<p><img src="https://img-blog.csdnimg.cn/99cefcbe6e5544b0a3bb779975852faf.png#pic_center" alt="在这里插入图片描述"></p>
 
         </div>
         
@@ -249,7 +277,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://mywangzai.github.io/2022/01/12/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/",
+                text: "http://mywangzai.github.io/2022/04/28/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0base64%E5%8A%A0%E5%AF%86/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -261,12 +289,12 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://mywangzai.github.io/2022/01/12/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/";
-            const title         = "「滴水逆向笔记（二）」";
-            const excerpt       = `1.在什么情况下满足2+3=1？
-其实这个无非就是自己定义一个进制，就比如自己定义一个十进制，进制中的元素可以是随机的，
-按顺序来0，2，3，1，6，4，5，9，7，8；这个就满足2+3=1
-2.进制并不是死的，就像365进制也是存在...`;
+            const hostUrl       = "http://mywangzai.github.io/2022/04/28/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0base64%E5%8A%A0%E5%AF%86/";
+            const title         = "「C语言实现base64加密」";
+            const excerpt       = `一.程序目的使用c/c++完成以下下算法:
+输入一个字符串，检查该字符串总ascii码值。如果值大于1000则对该字符串进行base64加密输出，否则该字符串与base64编码表进行异或输出
+二.程序代码代码如下：
+123456789...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -288,7 +316,7 @@
                     
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2022-01-12</span>
+                <span>最后编辑：2022-04-28</span>
                 </div>
             </div>
         </footer>
@@ -297,13 +325,9 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" 滴水逆向笔记（一）" href="/2022/01/12/滴水逆向笔记（一）/">&lt; 上一篇</a>
+                <a title=" BUUCTF MISC（随机基础八道题）" href="/2022/04/09/BUUCTFMISC/">&lt; 上一篇</a>
             </div>
             
-            
-            <div class="nav-next clearfix">
-                <a title=" 攻防世界web新手练习区（1-12）" href="/2022/02/09/攻防世界web新手练习区（1-12）/">下一篇 &gt;</a>
-            </div>
             
         </nav>
     
