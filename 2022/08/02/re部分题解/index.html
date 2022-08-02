@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="">
-  <title>滴水逆向笔记（一） | 旺仔的小窝</title>
+  <title>re部分题解 | 旺仔的小窝</title>
   <meta name="author" content="旺仔" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,20 +13,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="笔记" />
+    <meta name="keywords" content="" />
   
-  <meta name="description" content="#第一篇博客 1.进制：几进制就逢几进一，十进制逢十进一，二进制逢二进一 几进制中有几个数字，十进制有0，1，2，3，4，5，6，7，8，9这十个数字，二进制有0，1两个数字 十六进制有1，2，3，4，5，6，7，8，9，A,B,C,D,E,F； 二进制对应的为0001，0010，0011，0100，0101，0110，0111，1000，1001，1010(A)，1011(B)，1100(C),">
+  <meta name="description" content="无心插柳柳成荫，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="滴水逆向笔记（一）">
-<meta property="og:url" content="http://mywangzai.github.io/2022/01/12/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:title" content="re部分题解">
+<meta property="og:url" content="http://mywangzai.github.io/2022/08/02/re%E9%83%A8%E5%88%86%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="旺仔的小窝">
-<meta property="og:description" content="#第一篇博客 1.进制：几进制就逢几进一，十进制逢十进一，二进制逢二进一 几进制中有几个数字，十进制有0，1，2，3，4，5，6，7，8，9这十个数字，二进制有0，1两个数字 十六进制有1，2，3，4，5，6，7，8，9，A,B,C,D,E,F； 二进制对应的为0001，0010，0011，0100，0101，0110，0111，1000，1001，1010(A)，1011(B)，1100(C),">
+<meta property="og:description" content="无心插柳柳成荫，">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://mywangzai.github.io/null">
-<meta property="article:published_time" content="2022-01-12T09:51:46.000Z">
-<meta property="article:modified_time" content="2022-01-12T09:55:31.097Z">
+<meta property="article:published_time" content="2022-08-02T03:03:48.000Z">
+<meta property="article:modified_time" content="2022-08-02T03:03:48.048Z">
 <meta property="article:author" content="旺仔">
-<meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://mywangzai.github.io/null">
 <meta name="twitter:site" content="@null">
@@ -163,17 +162,17 @@
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">滴水逆向笔记（一）</h1>
+                <h1 class="kratos-entry-title text-center">re部分题解</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2022-01-12</li>
+                <li><i class="fa fa-calendar"></i> 2022-08-02</li>
                 <li><i class="fa fa-user"></i> 作者 旺仔</li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
                     
-                        512
+                        0
                     
                     字
                 </li>
@@ -182,23 +181,11 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1641981331097"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1659409428048"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
-            <p>#第一篇博客</p>
-<p>1.进制：几进制就逢几进一，十进制逢十进一，二进制逢二进一</p>
-<p>几进制中有几个数字，十进制有0，1，2，3，4，5，6，7，8，9这十个数字，二进制有0，1两个数字</p>
-<p>十六进制有1，2，3，4，5，6，7，8，9，A,B,C,D,E,F；</p>
-<p>二进制对应的为0001，0010，0011，0100，0101，0110，0111，1000，1001，1010(A)，1011(B)，1100(C),1101(D),1110(E),1111(F)</p>
-<p>2.二进制</p>
-<p>计算机上的所有文件都是以二进制方式存储的，且受硬件制约，只能用二进制，另外，二进制足够表示了</p>
-<p>3.一句经典的话：进制之间不需要转换，每个进制都是最完美的进制</p>
-<p>4.计算方法本质上就是查出来的</p>
-<p>十六进制下：</p>
-<p>15+5=15+1+4=24；</p>
-<p>5*4=5+5+5+1+4=24；<br>————————————————<br>版权声明：本文为CSDN博主「瑟瑟发dou的小怪」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_51295934/article/details/122331945">https://blog.csdn.net/m0_51295934/article/details/122331945</a></p>
-
+            
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -251,7 +238,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://mywangzai.github.io/2022/01/12/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/",
+                text: "http://mywangzai.github.io/2022/08/02/re%E9%83%A8%E5%88%86%E9%A2%98%E8%A7%A3/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -263,12 +250,9 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://mywangzai.github.io/2022/01/12/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/";
-            const title         = "「滴水逆向笔记（一）」";
-            const excerpt       = `#第一篇博客
-1.进制：几进制就逢几进一，十进制逢十进一，二进制逢二进一
-几进制中有几个数字，十进制有0，1，2，3，4，5，6，7，8，9这十个数字，二进制有0，1两个数字
-十六进制有1，2，3，4，5，6，7，8，9，A,B,C,...`;
+            const hostUrl       = "http://mywangzai.github.io/2022/08/02/re%E9%83%A8%E5%88%86%E9%A2%98%E8%A7%A3/";
+            const title         = "「re部分题解」";
+            const excerpt       = ``;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -287,10 +271,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a>
+                    
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2022-01-12</span>
+                <span>最后编辑：2022-08-02</span>
                 </div>
             </div>
         </footer>
@@ -299,12 +283,12 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" Hello World" href="/2022/01/12/hello-world/">&lt; 上一篇</a>
+                <a title=" C语言实现base64加密" href="/2022/04/28/C语言实现base64加密/">&lt; 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" 滴水逆向笔记（二）" href="/2022/01/12/滴水逆向笔记（二）/">下一篇 &gt;</a>
+                <a title=" BUUCTF RE（部分题解）" href="/2022/08/02/BUUCTFRE（部分题解）/">下一篇 &gt;</a>
             </div>
             
         </nav>
