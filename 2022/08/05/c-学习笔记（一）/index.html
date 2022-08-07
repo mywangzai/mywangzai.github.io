@@ -15,31 +15,24 @@
 
 
 
-<meta name="description" content="一、你竟然赶我走下载后是一个图片，直接用010editor打开，ctrl+F搜索flag，然后就出来了flag{stego_is_s0_bor1ing} 二、N种方法解决文件是一个exe，但无法打开，用010editor打开发现是base64转图片类型的字符串，这时可以直接复制这些东西用浏览器去打开也可以搜base64在线转换图片，得到的结果与上图一致，扫一下就出了flag{dca57f966e4">
+<meta name="description" content="一.指针1.const修饰指针常量指针：​        特点：指针指向地址可以修改，指针指向的值不能改变 12345678910#include&lt;iostream&gt;using namespace std;int main() &amp;#123;	int a[100] &#x3D; &amp;#123; 1,2,3,4,5 &amp;#125;;	int b &#x3D; 20;	const int * p &#x3D; a; &#x2F;&#x2F;常量">
 <meta property="og:type" content="article">
-<meta property="og:title" content="BUUCTF MISC（随机基础八道题）">
-<meta property="og:url" content="http://mywangzai.github.io/2022/04/09/BUUCTFMISC/index.html">
+<meta property="og:title" content="c++学习笔记（一）">
+<meta property="og:url" content="http://mywangzai.github.io/2022/08/05/c-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
 <meta property="og:site_name" content="旺仔的小窝">
-<meta property="og:description" content="一、你竟然赶我走下载后是一个图片，直接用010editor打开，ctrl+F搜索flag，然后就出来了flag{stego_is_s0_bor1ing} 二、N种方法解决文件是一个exe，但无法打开，用010editor打开发现是base64转图片类型的字符串，这时可以直接复制这些东西用浏览器去打开也可以搜base64在线转换图片，得到的结果与上图一致，扫一下就出了flag{dca57f966e4">
+<meta property="og:description" content="一.指针1.const修饰指针常量指针：​        特点：指针指向地址可以修改，指针指向的值不能改变 12345678910#include&lt;iostream&gt;using namespace std;int main() &amp;#123;	int a[100] &#x3D; &amp;#123; 1,2,3,4,5 &amp;#125;;	int b &#x3D; 20;	const int * p &#x3D; a; &#x2F;&#x2F;常量">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/33345ada929d42f3b5d25801518b3383.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/1ab36591cd01493d9047817b7583de90.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20e548ae2e45483d8c63228020fc11d3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/828b4703582840fd84b0e4773e70f030.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/59f0174b9b384d178bbbda9952bb0133.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/cc0a25a9bffe432ebe57317be7c89562.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/f478c3512df24ffebb2a8a7eb1a3e2bf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/bf8657f5a4db490c83f65eaadd25bc44.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/dd93dbc5c6d944fb925fc079827a2b98.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/12806b1fece5417580db40a82466fc87.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/ba52f970911b4e6da77d3622fd68cbe8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/e00d1306a85d404f8894bb14d374c39d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="article:published_time" content="2022-04-09T08:44:39.000Z">
-<meta property="article:modified_time" content="2022-08-03T07:29:08.992Z">
+<meta property="og:image" content="https://save-img-1303838282.cos.ap-nanjing.myqcloud.com/image-20220805114323476.png">
+<meta property="og:image" content="https://save-img-1303838282.cos.ap-nanjing.myqcloud.com/image-20220805115800471.png">
+<meta property="og:image" content="https://save-img-1303838282.cos.ap-nanjing.myqcloud.com/image-20220805120243259.png">
+<meta property="og:image" content="https://save-img-1303838282.cos.ap-nanjing.myqcloud.com/image-20220805164115267.png">
+<meta property="og:image" content="https://save-img-1303838282.cos.ap-nanjing.myqcloud.com/image-20220805164435539.png">
+<meta property="article:published_time" content="2022-08-05T00:25:24.000Z">
+<meta property="article:modified_time" content="2022-08-05T11:04:24.649Z">
 <meta property="article:author" content="旺仔">
-<meta property="article:tag" content="BUUCTF">
+<meta property="article:tag" content="c++笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/33345ada929d42f3b5d25801518b3383.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta name="twitter:image" content="https://save-img-1303838282.cos.ap-nanjing.myqcloud.com/image-20220805114323476.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -73,7 +66,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>BUUCTF MISC（随机基础八道题） | 旺仔的小窝</title>
+<title>c++学习笔记（一） | 旺仔的小窝</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -273,11 +266,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-BUUCTFMISC" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-c-学习笔记（一）" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/04/09/BUUCTFMISC/" class="article-date">
-      <time datetime="2022-04-09T08:44:39.000Z" itemprop="datePublished">2022-04-09</time>
+      <a href="/2022/08/05/c-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" class="article-date">
+      <time datetime="2022-08-05T00:25:24.000Z" itemprop="datePublished">2022-08-05</time>
 </a>
 
 
@@ -292,7 +285,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      BUUCTF MISC（随机基础八道题）
+      c++学习笔记（一）
     </h1>
   
 
@@ -303,7 +296,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BUUCTF/" rel="tag">BUUCTF</a></li></ul>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c-%E7%AC%94%E8%AE%B0/" rel="tag">c++笔记</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -313,14 +306,29 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="一、你竟然赶我走"><a href="#一、你竟然赶我走" class="headerlink" title="一、你竟然赶我走"></a>一、你竟然赶我走</h2><p>下载后是一个图片，直接用010editor打开，ctrl+F搜索flag，然后就出来了<br><img src="https://img-blog.csdnimg.cn/33345ada929d42f3b5d25801518b3383.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag{stego_is_s0_bor1ing}</p>
-<h2 id="二、N种方法解决"><a href="#二、N种方法解决" class="headerlink" title="二、N种方法解决"></a>二、N种方法解决</h2><p>文件是一个exe，但无法打开，用010editor打开发现是base64转图片类型的字符串，这时可以直接复制这些东西用浏览器去打开<br><img src="https://img-blog.csdnimg.cn/1ab36591cd01493d9047817b7583de90.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20e548ae2e45483d8c63228020fc11d3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">也可以搜base64在线转换图片，得到的结果与上图一致，扫一下就出了<br>flag{dca57f966e4e4e31fd5b15417da63269}</p>
-<h2 id="三、乌镇峰会种图"><a href="#三、乌镇峰会种图" class="headerlink" title="三、乌镇峰会种图"></a>三、乌镇峰会种图</h2><p>直接用010editor打开，一搜flag就搜出来了<br><img src="https://img-blog.csdnimg.cn/828b4703582840fd84b0e4773e70f030.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<h2 id="四、大白"><a href="#四、大白" class="headerlink" title="四、大白"></a>四、大白</h2><p>题目都说了图片小，那就把它调大些，这里把01改成08<br><img src="https://img-blog.csdnimg.cn/59f0174b9b384d178bbbda9952bb0133.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">打开图片，得到flag<br><img src="https://img-blog.csdnimg.cn/cc0a25a9bffe432ebe57317be7c89562.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag{He1l0_d4_ba1}</p>
-<h2 id="五、二维码"><a href="#五、二维码" class="headerlink" title="五、二维码"></a>五、二维码</h2><p>这道题主要考察对binwalk分离工具的使用<br>用binwalk分析发现这不仅仅是一张图片，还有压缩包，包里面有个文本<br><img src="https://img-blog.csdnimg.cn/f478c3512df24ffebb2a8a7eb1a3e2bf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">文本需要密码打开，根据文件名猜想应该是四位数字密码，暴力破解成功<br><img src="https://img-blog.csdnimg.cn/bf8657f5a4db490c83f65eaadd25bc44.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/dd93dbc5c6d944fb925fc079827a2b98.png" alt="在这里插入图片描述"><br>flag{vjpw_wnoei}</p>
-<h2 id="六、文件中的秘密"><a href="#六、文件中的秘密" class="headerlink" title="六、文件中的秘密"></a>六、文件中的秘密</h2><p>这道题考查对StegSolve工具的使用，使用file format功能，发现了flag，接下来就是把这个flag进行规矩处理即可<br><img src="https://img-blog.csdnimg.cn/12806b1fece5417580db40a82466fc87.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">当然，用010editor也可以，只不过搜的时候不要搜flag，搜一个f慢慢看就能找到<br><img src="https://img-blog.csdnimg.cn/ba52f970911b4e6da77d3622fd68cbe8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>flag{870c5a72806115cb5439345d8b014396}</p>
-<h2 id="七、wireshark"><a href="#七、wireshark" class="headerlink" title="七、wireshark"></a>七、wireshark</h2><p>这道题主要考察对wireshark的使用，题目说密码就是flag<br>直接用wireshark打开文件，之后，字符串搜索post（为什么搜索post？因为账号密码是post上去的，就这么将就地解释吧）<br>一个个翻找后找到了密码<br><img src="https://img-blog.csdnimg.cn/e00d1306a85d404f8894bb14d374c39d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA55Gf55Gf5Y-RZG9155qE5bCP5oCq,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag{ffb7567a1d4f4abdffdb54e022f8facd}</p>
-<h2 id="八、qr"><a href="#八、qr" class="headerlink" title="八、qr"></a>八、qr</h2><p>扫二维码就出了<br>flag{878865ce73370a4ce607d21ca01b5e59}</p>
+        <h1 id="一-指针"><a href="#一-指针" class="headerlink" title="一.指针"></a>一.指针</h1><h2 id="1-const修饰指针"><a href="#1-const修饰指针" class="headerlink" title="1.const修饰指针"></a>1.const修饰指针</h2><h3 id="常量指针："><a href="#常量指针：" class="headerlink" title="常量指针："></a>常量指针：</h3><p>​        特点：指针指向地址可以修改，指针指向的值不能改变</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">100</span>] = &#123; <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span> &#125;;</span><br><span class="line">	<span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> * p = a; <span class="comment">//常量指针</span></span><br><span class="line">	 p = &amp;b;  <span class="comment">//更换指向地址</span></span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;指针访问数组的第一个元素是&quot;</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>   运行结果</p>
+<p><img src="https://save-img-1303838282.cos.ap-nanjing.myqcloud.com/image-20220805114323476.png" alt="image-20220805114323476">                </p>
+<h3 id="指针常量："><a href="#指针常量：" class="headerlink" title="指针常量："></a>指针常量：</h3><p>​        特点：指针指向的地址不能改变，但是指向地址的值可以改变</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main() &#123;</span><br><span class="line">	int a = 1;		</span><br><span class="line">	int * const  p = &amp;a;  //指针常量</span><br><span class="line">	* p = 2;  //更改指向地址的值</span><br><span class="line">	</span><br><span class="line">	cout &lt;&lt; &quot;指针访问数组的第一个元素是&quot; &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<p><img src="https://save-img-1303838282.cos.ap-nanjing.myqcloud.com/image-20220805115800471.png" alt="image-20220805115800471"></p>
+<h3 id="既修饰指针，也修饰变量："><a href="#既修饰指针，也修饰变量：" class="headerlink" title="既修饰指针，也修饰变量："></a>既修饰指针，也修饰变量：</h3><p>​            特点：指针指向的地址及它对应的值不能改变</p>
+<p>报错是这样的</p>
+<p><img src="https://save-img-1303838282.cos.ap-nanjing.myqcloud.com/image-20220805120243259.png" alt="image-20220805120243259"></p>
+<h2 id="2-指针和函数"><a href="#2-指针和函数" class="headerlink" title="2.指针和函数"></a>2.指针和函数</h2><p>平常我们写的函数就比如</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp=a;</span><br><span class="line">a=b;</span><br><span class="line">b=temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">	<span class="built_in">swap</span>(a, b);</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;a=&quot;</span>&lt;&lt;a&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;b=&quot;</span>&lt;&lt;b&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> <img src="https://save-img-1303838282.cos.ap-nanjing.myqcloud.com/image-20220805164115267.png" alt="image-20220805164115267"></p>
+<p>这是值传递，不会影响到实参的值</p>
+<p>如果用指针的话</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> temp = *a;</span><br><span class="line">	*a = *b;</span><br><span class="line">	*b = temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">	<span class="built_in">swap</span>(&amp;a, &amp;b);</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;a=&quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;b=&quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://save-img-1303838282.cos.ap-nanjing.myqcloud.com/image-20220805164435539.png"></p>
+<p>这是地址传递，直接影响到实参的值</p>
 
       
     </div>
@@ -329,13 +337,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2022/04/09/BUUCTFMISC/">BUUCTF MISC（随机基础八道题）</a></p>
+        <p><span>本文标题:</span><a href="/2022/08/05/c-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/">c++学习笔记（一）</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页"></a></p>
-        <p><span>发布时间:</span>2022-04-09, 16:44:39</p>
-        <p><span>最后更新:</span>2022-08-03, 15:29:08</p>
+        <p><span>发布时间:</span>2022-08-05, 08:25:24</p>
+        <p><span>最后更新:</span>2022-08-05, 19:04:24</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2022/04/09/BUUCTFMISC/" title="BUUCTF MISC（随机基础八道题）">http://mywangzai.github.io/2022/04/09/BUUCTFMISC/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://mywangzai.github.io/2022/04/09/BUUCTFMISC/　　作者: " title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2022/08/05/c-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" title="c++学习笔记（一）">http://mywangzai.github.io/2022/08/05/c-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://mywangzai.github.io/2022/08/05/c-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/　　作者: " title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -348,15 +356,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2022/04/28/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0base64%E5%8A%A0%E5%AF%86/">
-                    C语言实现base64加密
+                <a href="/2022/08/07/BUUCTF-RE%EF%BC%88%E4%BA%8C%EF%BC%89/">
+                    BUUCTF RE（一）
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2022/03/25/csapp-lab%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8Alab1wp/">
-                    csapp-lab环境搭建及lab1wp
+                <a href="/2022/08/02/BUUCTFRE%EF%BC%88%E4%B8%80%EF%BC%89/">
+                    BUUCTF RE（一）
                 </a>
             </div>
         
@@ -368,7 +376,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BD%A0%E7%AB%9F%E7%84%B6%E8%B5%B6%E6%88%91%E8%B5%B0"><span class="toc-number">1.</span> <span class="toc-text">一、你竟然赶我走</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81N%E7%A7%8D%E6%96%B9%E6%B3%95%E8%A7%A3%E5%86%B3"><span class="toc-number">2.</span> <span class="toc-text">二、N种方法解决</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%B9%8C%E9%95%87%E5%B3%B0%E4%BC%9A%E7%A7%8D%E5%9B%BE"><span class="toc-number">3.</span> <span class="toc-text">三、乌镇峰会种图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%A4%A7%E7%99%BD"><span class="toc-number">4.</span> <span class="toc-text">四、大白</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BA%8C%E7%BB%B4%E7%A0%81"><span class="toc-number">5.</span> <span class="toc-text">五、二维码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84%E7%A7%98%E5%AF%86"><span class="toc-number">6.</span> <span class="toc-text">六、文件中的秘密</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81wireshark"><span class="toc-number">7.</span> <span class="toc-text">七、wireshark</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81qr"><span class="toc-number">8.</span> <span class="toc-text">八、qr</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E6%8C%87%E9%92%88"><span class="toc-number">1.</span> <span class="toc-text">一.指针</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-const%E4%BF%AE%E9%A5%B0%E6%8C%87%E9%92%88"><span class="toc-number">1.1.</span> <span class="toc-text">1.const修饰指针</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F%E6%8C%87%E9%92%88%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">常量指针：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E5%B8%B8%E9%87%8F%EF%BC%9A"><span class="toc-number">1.1.2.</span> <span class="toc-text">指针常量：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A2%E4%BF%AE%E9%A5%B0%E6%8C%87%E9%92%88%EF%BC%8C%E4%B9%9F%E4%BF%AE%E9%A5%B0%E5%8F%98%E9%87%8F%EF%BC%9A"><span class="toc-number">1.1.3.</span> <span class="toc-text">既修饰指针，也修饰变量：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%8C%87%E9%92%88%E5%92%8C%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.</span> <span class="toc-text">2.指针和函数</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -404,7 +412,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"BUUCTF MISC（随机基础八道题）　| 旺仔的小窝　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"c++学习笔记（一）　| 旺仔的小窝　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -424,7 +432,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2022/04/28/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0base64%E5%8A%A0%E5%AF%86/" title="上一篇: C语言实现base64加密">
+            <a href="/2022/08/07/BUUCTF-RE%EF%BC%88%E4%BA%8C%EF%BC%89/" title="上一篇: BUUCTF RE（一）">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -432,7 +440,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2022/03/25/csapp-lab%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8Alab1wp/" title="下一篇: csapp-lab环境搭建及lab1wp">
+            <a href="/2022/08/02/BUUCTFRE%EF%BC%88%E4%B8%80%EF%BC%89/" title="下一篇: BUUCTF RE（一）">
                 <i class="fa fa-angle-right"></i>
             </a>
         
