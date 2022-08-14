@@ -187,7 +187,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BUUCTF/" rel="tag">BUUCTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-%E7%AC%94%E8%AE%B0/" rel="tag">c++笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/" rel="tag">攻防世界</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%AE%B0/" rel="tag">杂记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BB%B4%E6%B0%B4/" rel="tag">滴水</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BB%B4%E6%B0%B4%E7%AC%94%E8%AE%B0/" rel="tag">滴水笔记</a></li></ul>
+                        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BUUCTF/" rel="tag">BUUCTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XCTF/" rel="tag">XCTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c-%E7%AC%94%E8%AE%B0/" rel="tag">c++笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C/" rel="tag">攻防世界</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%AE%B0/" rel="tag">杂记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BB%B4%E6%B0%B4/" rel="tag">滴水</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BB%B4%E6%B0%B4%E7%AC%94%E8%AE%B0/" rel="tag">滴水笔记</a></li></ul>
                     </div>
                 </section>
                 
@@ -263,6 +263,76 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-滴水逆向笔记（二）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/01/12/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="article-date">
+      <time datetime="2022-01-12T13:41:00.000Z" itemprop="datePublished">2022-01-12</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/01/12/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/">滴水逆向笔记（二）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>1.在什么情况下满足2+3=1？</p>
+<p>其实这个无非就是自己定义一个进制，就比如自己定义一个十进制，进制中的元素可以是随机的，</p>
+<p>按顺序来0，2，3，1，6，4，5，9，7，8；这个就满足2+3=1</p>
+<p>2.进制并不是死的，就像365进制也是存在的，多少进制都是存在的，这时候思维应该要放灵活的</p>
+<p>3.假如定义一个三进制，由2，0，1组成；</p>
+<p>2 0 1</p>
+<p>02 00 01</p>
+<p>12 10 11</p>
+<p>11+2（往后移两位的意思）=020</p>
+<p>11+2（这里是进制中的2）=022</p>
+<p>4.通过这种咋一眼看起来很没有逻辑的进制，我们可以搞一种这种类型的进制加密，也是其意义之一了</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BB%B4%E6%B0%B4%E7%AC%94%E8%AE%B0/" rel="tag">滴水笔记</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-滴水逆向笔记（一）" class="article article-type-post" itemscope itemprop="blogPost">
   
